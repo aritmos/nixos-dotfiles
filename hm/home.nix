@@ -1,9 +1,10 @@
 # [home-manager]
-{ lib, pkgs, ... }:
+{ lib, pkgs, inputs, ... }:
 
 {
   imports = [
     ./programs
+    ./shell.nix
   ];
 
   home.username = "nixos";
@@ -22,7 +23,51 @@
   # environment.
   home.packages = with pkgs; [
     home-manager
+
+    # --- utils
+    ripgrep
     tree
+    just
+    lazygit
+    eza
+    tokei
+
+    # --- productivity
+    zellij
+
+    # --- nixos
+    nix-search-cli
+
+    # --- coding
+
+    # rust (via fenix)
+    (fenix.complete.withComponents [
+      "cargo"
+      "clippy"
+      "rust-src"
+      "rustc"
+      "rustfmt"
+    ])
+    rust-analyzer-nightly
+
+    # python
+    python313
+    python313Packages.python-lsp-server
+    pyright
+
+    # go
+    go
+    gopls
+
+    # zig
+    zig
+    zls
+
+    # lua
+    lua-language-server
+
+    # --- misc
+    starship
   ];
 
   home.sessionVariables = {

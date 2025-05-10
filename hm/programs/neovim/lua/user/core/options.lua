@@ -15,7 +15,7 @@ o.tabstop = 4
 o.shiftwidth = 4
 o.expandtab = true
 o.autoindent = true
-o.smartindent = true
+o.smartindent = false
 
 -- line wrapping
 o.wrap = true
@@ -50,3 +50,14 @@ o.iskeyword:append("-")
 
 vim.g.acd = true
 
+local function get_os_id()
+  local os_release = vim.fn.readfile('/etc/os-release')
+  for _, line in ipairs(os_release) do
+    if line:match('^ID=(.+)') then
+      return line:match('^ID=(.+)')
+    end
+  end
+
+  return "unknown"
+end
+vim.g.os_id = get_os_id()

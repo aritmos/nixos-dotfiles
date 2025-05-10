@@ -1,4 +1,4 @@
-{pkgs, lib, ...}:
+{pkgs, lib, inputs, ...}:
 
 {
   # This value determines the NixOS release from which the default
@@ -10,6 +10,8 @@
   system.stateVersion = "24.11"; # Did you read the comment?
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
+  
+  nixpkgs.overlays = [ inputs.fenix.overlays.default ];
 
   environment.systemPackages = with pkgs; [
     zsh

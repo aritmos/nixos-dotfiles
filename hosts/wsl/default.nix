@@ -12,4 +12,8 @@ in
 
   wsl.enable = true;
   wsl.defaultUser = "nixos";
+
+  environment.systemPackages = with pkgs; [
+    wsl-open
+  ];
 }
