@@ -27,6 +27,7 @@ in
     NEOVIM_PACKPATH_DIR = builtins.toString packpathDirs;
   };
 
+  # TODO: setup vimPluginsUpdater
   programs.neovim = {
     enable = true;
     plugins = with pkgs.vimPlugins; [

@@ -1,8 +1,5 @@
 { config, pkgs, inputs, ...}:
 
-let
-  wslFlake = builtins.getFlake (toString ./flake.nix);
-in
 {
   imports = [
     ./hardware-configuration.nix

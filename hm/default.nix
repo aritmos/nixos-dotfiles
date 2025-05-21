@@ -12,6 +12,4 @@
     useUserPackages = true;
     users."nixos" = import ./home.nix;
   };
-  
-  # TODO: move to its own `shell` config file
 }

@@ -8,7 +8,7 @@ default:
 
 rebuild:
     git add .
-    sudo nixos-rebuild switch --flake ~/.dotfiles/#{{system}}
+    sudo nixos-rebuild switch --impure --flake ~/.dotfiles/#{{system}}
     exec zsh
 
 update:

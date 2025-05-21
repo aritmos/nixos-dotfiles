@@ -3,10 +3,11 @@
 
 {
   imports = [
-    ./neovim
+    ./gh.nix
     ./git.nix
-    ./zellij.nix
+    ./neovim
     ./starship.nix
+    ./zellij.nix
   ];
 
   # small program configs go here. 
@@ -15,5 +16,4 @@
   programs.eza = {
     enable = true;
   };
-
 }

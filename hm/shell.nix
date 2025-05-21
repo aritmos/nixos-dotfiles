@@ -11,8 +11,13 @@
       ls = "eza";
       lsa = "ls -lah";
       py = "python3";
+      # TODO: move to wsl config
       xdg-open = "wsl-open";
     };
-  };
 
+    # emacs-style binds (vi is annoying)
+    initContent = ''
+      bindkey -e
+    '';
+  };
 }
