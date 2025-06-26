@@ -73,6 +73,7 @@ in
         zig
         nix
         just
+        typst
       ]))
       nvim-treesitter-textobjects
       nvim-treesitter-context

@@ -24,4 +24,11 @@ saga.setup({
         -- show_code_action = false,
         max_show_width = 0.8
     },
+    outline = {
+        win_position = 'left',
+        win_width = 30,
+        keys = {
+            jump = '<CR>',
+        },
+    },
 })

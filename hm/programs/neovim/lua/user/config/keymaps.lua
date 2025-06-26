@@ -11,6 +11,7 @@ M.lsp = {
 
     { "<leader>a",  "<cmd>Lspsaga code_action<CR>",              opts = { desc = "Code [A]ction" } },
     { "<leader>rn", "<cmd>Lspsaga rename autosave=1<CR>",        opts = { desc = "[R]e[n]ame" } },
+    { "<leader>E",  "<cmd>Lspsaga outline<CR>",                  opts = { desc = "Outline" } },
 
     -- use native diagnostics
     { "<leader>d",  "<cmd>lua vim.diagnostic.open_float()<CR>",  opts = { desc = "[D]iagnostic" } },
@@ -130,4 +131,3 @@ M.dap_ui = {
 }
 
 return M
-

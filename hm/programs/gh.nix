@@ -1,17 +1,15 @@
 # [home-manager]
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, secrets, ... }:
 
-let
-  user = config.home.username;
-  configDir = config.xdg.configHome;
-in
 {
-  home.file."${configDir}/gh/hosts.yml" = {
-    source = builtins.toPath "/home/${user}/.secrets/gh/hosts.yml";
-  };
-
   programs.gh = {
     enable = true;
     gitCredentialHelper.enable = true;
+    hosts."github.com" = {
+      users.aritmos.oauth_token = secrets.ghToken;
+      git_protocol = "https";
+      oauth_token = secrets.ghToken;
+      user = "aritmos";
+    };
   };
 }

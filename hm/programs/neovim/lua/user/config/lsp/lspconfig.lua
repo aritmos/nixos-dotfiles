@@ -36,7 +36,6 @@ local keymaps = function(client, bufnr)
 
     -- language-specific binds
     local filetype = vim.bo.filetype;
-    print("LSP attach: filetype = " .. filetype)
     if binds.langs[filetype] then
         for _, bind in ipairs(binds.langs[filetype]) do
             keymap.set(bind.mode or "n", bind[1], bind[2], extend_opts(bind.opts))
@@ -92,7 +91,6 @@ vim.api.nvim_create_user_command(
 -- -------------
 
 local on_attach = function(client, bufnr)
-    print("LSP attaching!")
     -- register keymaps
     keymaps(client, bufnr)
     -- enable inlay hints
@@ -242,3 +240,7 @@ lspconfig.zls.setup({
 --     on_attach = on_attach,
 --     capabilities = capabilities,
 -- })
+
+-- Typst
+
+lspconfig.tinymist.setup({})

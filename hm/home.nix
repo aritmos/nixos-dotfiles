@@ -1,5 +1,5 @@
 # [home-manager]
-{ lib, pkgs, inputs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 {
   imports = [
@@ -32,6 +32,9 @@
     eza
     tokei
 
+    # --- apps
+    typst
+
     # --- productivity
     zellij
 
@@ -39,6 +42,8 @@
     nix-search-cli
 
     # --- coding
+    gh
+    codecrafters-cli
 
     # rust (via fenix)
     (fenix.complete.withComponents [
@@ -49,6 +54,10 @@
       "rustfmt"
     ])
     rust-analyzer-nightly
+    bacon
+
+    # c / c++
+    gcc
 
     # python
     python313
@@ -65,6 +74,13 @@
 
     # lua
     lua-language-server
+
+    # typst
+    tinymist
+
+    # misc
+    openssl
+    pkg-config
 
     # --- misc
     starship
