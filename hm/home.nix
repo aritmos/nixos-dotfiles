@@ -31,6 +31,7 @@
     lazygit
     eza
     tokei
+    rsync
 
     # --- apps
     typst

@@ -16,4 +16,8 @@
   programs.eza = {
     enable = true;
   };
+
+  programs.bacon.settings = {
+   default_job = "clippy";
+  };
 }

@@ -49,13 +49,14 @@ M.telescope = {
         ':lua require("telescope.builtin").find_files(require("user.extensions.telescope").minimal_theme())<CR>',
         desc = "Telescope: Find Files",
     },
-    { "<leader>fe", "<cmd>Telescope file_browser<CR>",              desc = "Telescope: Explorer" },
-    { "<leader>fk", "<cmd>Telescope keymaps<CR>",                   desc = "Telescope: Keymaps" },
-    { "<leader>fb", "<cmd>Telescope buffers theme=dropdown<CR>",    desc = "Telescope: Buffers" },
-    { "<leader>fh", "<cmd>Telescope help_tags<CR>",                 desc = "Telescope: Help Tags" },
-    { "<leader>fd", "<cmd>Telescope diagnostics<CR>",               desc = "Telescope: Diagnostics" },
-    { "<leader>/",  "<cmd>Telescope live_grep<CR>",                 desc = "Telescope: Grep" },
-    { "<leader>?",  "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Telescope: Buffer Grep" },
+    { "<leader>fe", "<cmd>Telescope file_browser<CR>",                            desc = "Telescope: Explorer" },
+    { "<leader>fk", "<cmd>Telescope keymaps<CR>",                                 desc = "Telescope: Keymaps" },
+    { "<leader>fb", "<cmd>Telescope buffers theme=dropdown<CR>",                  desc = "Telescope: Buffers" },
+    { "<leader>fh", "<cmd>Telescope help_tags<CR>",                               desc = "Telescope: Help Tags" },
+    { "<leader>fd", "<cmd>Telescope diagnostics<CR>",                             desc = "Telescope: Diagnostics" },
+    { "<leader>/",  "<cmd>Telescope live_grep<CR>",                               desc = "Telescope: Grep" },
+    { "<leader>?",  "<cmd>Telescope current_buffer_fuzzy_find<CR>",               desc = "Telescope: Buffer Grep" },
+    { "<A-q>",      "<cmd>lua require('telescope.actions').smart_send_to_qflist", desc = "Telescope: Send to QF list", mode = "i" },
 
     -- Treesitter menus: (for use in Rust)
     {
