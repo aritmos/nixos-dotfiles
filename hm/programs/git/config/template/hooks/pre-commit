@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+
+if git diff --cached | rg -e 'BEGIN RSA PRIVATE KEY' \
+                            -e 'BEGIN OPENSSH PRIVATE KEY' \
+                            -e 'BEGIN ENCRYPTED PRIVATE KEY' \
+                            -e 'BEGIN PGP PRIVATE KEY BLOCK' \
+                            -e 'DO NOT PUSH' \ 
+                            -e 'DO NOT COMMIT'; then
+  echo "❌ Commit blocked: detected banned string in diff"
+  exit 1
+fi
+
+exit 0

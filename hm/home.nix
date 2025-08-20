@@ -44,6 +44,8 @@
 
     # --- coding
     gh
+    jujutsu
+    lazyjj
     codecrafters-cli
 
     # rust (via fenix)

@@ -35,8 +35,6 @@
         enabled = true;
         autoupdate = true;
       };
-      # TODO: setup global gitignore
-      # core.excludesfile = "${xdg.configDir}/git/.gitignore"
       rebase = {
         autoSquash = true;
         autoStash = true;
@@ -44,5 +42,10 @@
         rebase = true;
       };
     };
+  };
+
+  home.file."${config.xdg.configHome}/git" = {
+    source = ./config;
+    recursive = true;
   };
 }

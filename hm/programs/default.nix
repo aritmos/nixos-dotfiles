@@ -4,7 +4,7 @@
 {
   imports = [
     ./gh.nix
-    ./git.nix
+    ./git
     ./neovim
     ./starship.nix
     ./zellij.nix
@@ -19,5 +19,12 @@
 
   programs.bacon.settings = {
    default_job = "clippy";
+  };
+
+  programs.jujutsu.settings = {
+    user = {
+      email = "aritmos@email.com";
+      name = "aritmos";
+    };
   };
 }

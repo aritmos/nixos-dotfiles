@@ -1,3 +1,4 @@
+#[home-manager]
 { config, lib, pkgs, ...}:
 
 {
@@ -13,6 +14,7 @@
       py = "python3";
       # TODO: move to wsl config
       xdg-open = "wsl-open";
+      lj = "lazyjj";
     };
 
     # emacs-style binds (vi is annoying)
